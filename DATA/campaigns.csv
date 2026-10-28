@@ -1,0 +1,61 @@
+campaign_id,campaign_name,channel,start_date,end_date,campaign_spend
+1,Customer_Rewards_Social_001,Social,2026-08-22,2026-08-29,27799.8
+2,New_Arrivals_Paid_Search_002,Paid Search,2026-07-13,2026-07-27,169651.57
+3,Seasonal_Offers_Paid_Search_003,Paid Search,2026-07-21,2026-08-15,198035.09
+4,Product_Launch_Paid_Search_004,Paid Search,2026-07-19,2026-07-30,59086.4
+5,Festive_Sale_Social_005,Social,2026-02-28,2026-03-21,84815.84
+6,Product_Launch_Email_006,Email,2026-04-02,2026-04-13,11557.33
+7,Festive_Sale_Paid_Search_007,Paid Search,2025-10-06,2025-10-23,83862.75
+8,Customer_Rewards_Paid_Search_008,Paid Search,2026-03-17,2026-03-26,95541.9
+9,New_Arrivals_Referral_009,Referral,2026-03-27,2026-04-17,78474.19
+10,Product_Launch_Paid_Search_010,Paid Search,2026-08-04,2026-08-14,105344.44
+11,Weekend_Deals_Paid_Search_011,Paid Search,2026-03-04,2026-03-29,148068.47
+12,Product_Launch_Social_012,Social,2025-10-25,2025-11-13,133318.15
+13,Customer_Rewards_Paid_Search_013,Paid Search,2026-08-12,2026-09-05,145367.01
+14,New_Arrivals_Paid_Search_014,Paid Search,2025-10-12,2025-11-04,179287.6
+15,Product_Launch_Social_015,Social,2026-01-02,2026-01-11,20254.49
+16,New_Arrivals_Paid_Search_016,Paid Search,2026-04-17,2026-05-07,143759.47
+17,Festive_Sale_Email_017,Email,2025-10-28,2025-11-17,44562.93
+18,New_Arrivals_Social_018,Social,2026-06-20,2026-07-09,130574.25
+19,Product_Launch_Social_019,Social,2026-03-01,2026-03-16,92076.9
+20,Festive_Sale_Social_020,Social,2026-08-24,2026-09-12,109652.17
+21,New_Arrivals_Social_021,Social,2026-03-25,2026-04-12,125976.95
+22,Weekend_Deals_Paid_Search_022,Paid Search,2026-03-15,2026-04-11,237756.5
+23,Festive_Sale_Social_023,Social,2025-12-10,2025-12-26,34801.04
+24,New_Arrivals_Email_024,Email,2025-10-27,2025-11-25,44399.28
+25,New_Arrivals_Paid_Search_025,Paid Search,2025-10-01,2025-10-27,158486.52
+26,Product_Launch_Email_026,Email,2026-01-23,2026-02-17,55229.83
+27,Seasonal_Offers_Email_027,Email,2026-06-13,2026-07-04,17057.68
+28,New_Arrivals_Social_028,Social,2025-11-23,2025-12-06,125806.57
+29,Product_Launch_Paid_Search_029,Paid Search,2026-04-29,2026-05-05,48014.79
+30,Customer_Rewards_Email_030,Email,2025-11-27,2025-12-04,9765.66
+31,Customer_Rewards_Social_031,Social,2026-08-13,2026-09-10,217638.83
+32,New_Arrivals_Paid_Search_032,Paid Search,2026-06-09,2026-07-04,146604.42
+33,Weekend_Deals_Paid_Search_033,Paid Search,2026-05-08,2026-05-19,71483.95
+34,Weekend_Deals_Social_034,Social,2026-04-09,2026-04-25,135951.46
+35,Weekend_Deals_Paid_Search_035,Paid Search,2025-11-12,2025-12-11,273444.52
+36,Customer_Rewards_Social_036,Social,2025-11-24,2025-12-02,28441.76
+37,Seasonal_Offers_Social_037,Social,2026-07-31,2026-08-18,65378.38
+38,New_Arrivals_Social_038,Social,2026-05-16,2026-06-05,80430.75
+39,New_Arrivals_Paid_Search_039,Paid Search,2026-01-22,2026-02-19,95961.92
+40,Seasonal_Offers_Referral_040,Referral,2025-10-03,2025-10-17,24718.17
+41,Product_Launch_Referral_041,Referral,2025-10-02,2025-10-09,10103.74
+42,Product_Launch_Paid_Search_042,Paid Search,2026-06-24,2026-07-20,298588.05
+43,Weekend_Deals_Social_043,Social,2026-08-09,2026-08-15,14856.42
+44,New_Arrivals_Paid_Search_044,Paid Search,2026-05-25,2026-06-01,43095.56
+45,New_Arrivals_Social_045,Social,2026-03-24,2026-04-21,106049.42
+46,Weekend_Deals_Referral_046,Referral,2026-08-21,2026-09-12,28329.06
+47,Festive_Sale_Email_047,Email,2026-07-03,2026-07-16,10306.15
+48,Festive_Sale_Email_048,Email,2025-11-01,2025-11-07,14184.12
+49,Seasonal_Offers_Paid_Search_049,Paid Search,2026-06-28,2026-07-14,150858.48
+50,Festive_Sale_Social_050,Social,2026-02-17,2026-02-27,92811.24
+51,Seasonal_Offers_Social_051,Social,2026-08-21,2026-09-12,159138.15
+52,Seasonal_Offers_Referral_052,Referral,2026-04-06,2026-04-30,37521.0
+53,Seasonal_Offers_Social_053,Social,2026-07-08,2026-07-19,96610.76
+54,Festive_Sale_Paid_Search_054,Paid Search,2026-01-15,2026-02-09,309272.23
+55,Product_Launch_Social_055,Social,2026-07-14,2026-07-30,141449.03
+56,Product_Launch_Email_056,Email,2026-03-16,2026-03-26,10175.08
+57,Seasonal_Offers_Paid_Search_057,Paid Search,2025-11-15,2025-11-22,43393.12
+58,Festive_Sale_Email_058,Email,2025-12-20,2026-01-03,20153.81
+59,New_Arrivals_Social_059,Social,2025-10-06,2025-10-19,58019.45
+60,New_Arrivals_Email_060,Email,2026-09-04,2026-09-28,31033.71

@@ -1,0 +1,501 @@
+product_id,product_name,category,price_inr
+1,Smartphone - Variant 01,Electronics,37839.02
+2,Headphones - Variant 01,Electronics,36088.6
+3,Laptop - Variant 01,Electronics,10362.52
+4,Smartwatch - Variant 01,Electronics,60510.57
+5,Bluetooth Speaker - Variant 01,Electronics,77852.58
+6,Power Bank - Variant 01,Electronics,7100.07
+7,Keyboard - Variant 01,Electronics,24692.5
+8,Monitor - Variant 01,Electronics,63786.19
+9,Wireless Mouse - Variant 01,Electronics,32386.72
+10,Tablet - Variant 01,Electronics,78616.3
+11,Smartphone - Variant 02,Electronics,19319.12
+12,Headphones - Variant 02,Electronics,44810.32
+13,Laptop - Variant 02,Electronics,42360.23
+14,Smartwatch - Variant 02,Electronics,25891.57
+15,Bluetooth Speaker - Variant 02,Electronics,19751.28
+16,Power Bank - Variant 02,Electronics,44025.71
+17,Keyboard - Variant 02,Electronics,27394.16
+18,Monitor - Variant 02,Electronics,64688.13
+19,Wireless Mouse - Variant 02,Electronics,29467.68
+20,Tablet - Variant 02,Electronics,14519.88
+21,Smartphone - Variant 03,Electronics,62327.19
+22,Headphones - Variant 03,Electronics,54719.89
+23,Laptop - Variant 03,Electronics,23541.36
+24,Smartwatch - Variant 03,Electronics,1226.31
+25,Bluetooth Speaker - Variant 03,Electronics,74367.49
+26,Power Bank - Variant 03,Electronics,50854.26
+27,Keyboard - Variant 03,Electronics,40793.04
+28,Monitor - Variant 03,Electronics,40981.93
+29,Wireless Mouse - Variant 03,Electronics,30386.5
+30,Tablet - Variant 03,Electronics,39711.87
+31,Smartphone - Variant 04,Electronics,51881.52
+32,Headphones - Variant 04,Electronics,77539.61
+33,Laptop - Variant 04,Electronics,28690.28
+34,Smartwatch - Variant 04,Electronics,61525.19
+35,Bluetooth Speaker - Variant 04,Electronics,59175.13
+36,Power Bank - Variant 04,Electronics,30964.66
+37,Keyboard - Variant 04,Electronics,57029.51
+38,Monitor - Variant 04,Electronics,2342.01
+39,Wireless Mouse - Variant 04,Electronics,76685.56
+40,Tablet - Variant 04,Electronics,60790.18
+41,Smartphone - Variant 05,Electronics,21287.15
+42,Headphones - Variant 05,Electronics,36411.05
+43,Laptop - Variant 05,Electronics,52506.96
+44,Smartwatch - Variant 05,Electronics,22354.59
+45,Bluetooth Speaker - Variant 05,Electronics,32082.11
+46,Power Bank - Variant 05,Electronics,59203.11
+47,Keyboard - Variant 05,Electronics,53291.24
+48,Monitor - Variant 05,Electronics,41755.62
+49,Wireless Mouse - Variant 05,Electronics,21929.28
+50,Tablet - Variant 05,Electronics,12322.23
+51,Smartphone - Variant 06,Electronics,51085.43
+52,Headphones - Variant 06,Electronics,70657.1
+53,Laptop - Variant 06,Electronics,22482.27
+54,Smartwatch - Variant 06,Electronics,10530.63
+55,Bluetooth Speaker - Variant 06,Electronics,17711.24
+56,Power Bank - Variant 06,Electronics,56405.24
+57,Keyboard - Variant 06,Electronics,55449.77
+58,Monitor - Variant 06,Electronics,20600.85
+59,Wireless Mouse - Variant 06,Electronics,10353.37
+60,Tablet - Variant 06,Electronics,75501.56
+61,Smartphone - Variant 07,Electronics,10063.84
+62,Headphones - Variant 07,Electronics,76748.43
+63,Laptop - Variant 07,Electronics,71902.7
+64,Smartwatch - Variant 07,Electronics,74460.68
+65,Bluetooth Speaker - Variant 07,Electronics,39641.45
+66,Power Bank - Variant 07,Electronics,5180.11
+67,Keyboard - Variant 07,Electronics,12450.19
+68,Monitor - Variant 07,Electronics,64487.04
+69,Wireless Mouse - Variant 07,Electronics,26379.67
+70,Tablet - Variant 07,Electronics,62645.86
+71,Smartphone - Variant 08,Electronics,32417.2
+72,Headphones - Variant 08,Electronics,21245.5
+73,Laptop - Variant 08,Electronics,59253.43
+74,Smartwatch - Variant 08,Electronics,56865.36
+75,Bluetooth Speaker - Variant 08,Electronics,70777.34
+76,Power Bank - Variant 08,Electronics,54188.82
+77,Keyboard - Variant 08,Electronics,32107.75
+78,Monitor - Variant 08,Electronics,9314.3
+79,Wireless Mouse - Variant 08,Electronics,5043.91
+80,Tablet - Variant 08,Electronics,18983.81
+81,Smartphone - Variant 09,Electronics,46821.05
+82,Headphones - Variant 09,Electronics,70939.29
+83,Laptop - Variant 09,Electronics,52650.4
+84,Smartwatch - Variant 09,Electronics,43219.64
+85,Bluetooth Speaker - Variant 09,Electronics,16537.66
+86,Power Bank - Variant 09,Electronics,78633.7
+87,Keyboard - Variant 09,Electronics,35784.95
+88,Monitor - Variant 09,Electronics,33243.28
+89,Wireless Mouse - Variant 09,Electronics,15675.81
+90,Tablet - Variant 09,Electronics,71755.41
+91,Smartphone - Variant 10,Electronics,52903.42
+92,Headphones - Variant 10,Electronics,9451.79
+93,Laptop - Variant 10,Electronics,18989.69
+94,Smartwatch - Variant 10,Electronics,10053.75
+95,Bluetooth Speaker - Variant 10,Electronics,12930.08
+96,Power Bank - Variant 10,Electronics,16514.01
+97,Keyboard - Variant 10,Electronics,31008.18
+98,Monitor - Variant 10,Electronics,17532.46
+99,Wireless Mouse - Variant 10,Electronics,73416.95
+100,Tablet - Variant 10,Electronics,60840.39
+101,T-Shirt - Variant 01,Fashion,4673.74
+102,Jeans - Variant 01,Fashion,1238.56
+103,Jacket - Variant 01,Fashion,4115.94
+104,Sneakers - Variant 01,Fashion,2279.51
+105,Shirt - Variant 01,Fashion,4676.81
+106,Dress - Variant 01,Fashion,1569.12
+107,Hoodie - Variant 01,Fashion,3188.97
+108,Handbag - Variant 01,Fashion,1150.59
+109,Kurta - Variant 01,Fashion,394.79
+110,Casual Shoes - Variant 01,Fashion,2731.05
+111,T-Shirt - Variant 02,Fashion,777.26
+112,Jeans - Variant 02,Fashion,2111.15
+113,Jacket - Variant 02,Fashion,2710.31
+114,Sneakers - Variant 02,Fashion,3567.22
+115,Shirt - Variant 02,Fashion,3096.33
+116,Dress - Variant 02,Fashion,4798.37
+117,Hoodie - Variant 02,Fashion,3648.79
+118,Handbag - Variant 02,Fashion,2428.57
+119,Kurta - Variant 02,Fashion,1142.57
+120,Casual Shoes - Variant 02,Fashion,1659.94
+121,T-Shirt - Variant 03,Fashion,1357.67
+122,Jeans - Variant 03,Fashion,2693.6
+123,Jacket - Variant 03,Fashion,4783.96
+124,Sneakers - Variant 03,Fashion,2378.9
+125,Shirt - Variant 03,Fashion,1315.39
+126,Dress - Variant 03,Fashion,2133.09
+127,Hoodie - Variant 03,Fashion,2528.3
+128,Handbag - Variant 03,Fashion,1372.06
+129,Kurta - Variant 03,Fashion,1336.25
+130,Casual Shoes - Variant 03,Fashion,668.78
+131,T-Shirt - Variant 04,Fashion,1507.41
+132,Jeans - Variant 04,Fashion,2823.16
+133,Jacket - Variant 04,Fashion,780.08
+134,Sneakers - Variant 04,Fashion,3512.43
+135,Shirt - Variant 04,Fashion,3426.61
+136,Dress - Variant 04,Fashion,1055.69
+137,Hoodie - Variant 04,Fashion,2803.43
+138,Handbag - Variant 04,Fashion,375.05
+139,Kurta - Variant 04,Fashion,1607.67
+140,Casual Shoes - Variant 04,Fashion,3211.2
+141,T-Shirt - Variant 05,Fashion,2383.65
+142,Jeans - Variant 05,Fashion,1627.52
+143,Jacket - Variant 05,Fashion,822.26
+144,Sneakers - Variant 05,Fashion,624.29
+145,Shirt - Variant 05,Fashion,4265.61
+146,Dress - Variant 05,Fashion,2983.68
+147,Hoodie - Variant 05,Fashion,1030.49
+148,Handbag - Variant 05,Fashion,1995.92
+149,Kurta - Variant 05,Fashion,4326.45
+150,Casual Shoes - Variant 05,Fashion,1747.18
+151,T-Shirt - Variant 06,Fashion,3735.53
+152,Jeans - Variant 06,Fashion,2247.67
+153,Jacket - Variant 06,Fashion,3000.3
+154,Sneakers - Variant 06,Fashion,1230.09
+155,Shirt - Variant 06,Fashion,1093.31
+156,Dress - Variant 06,Fashion,2228.39
+157,Hoodie - Variant 06,Fashion,1435.27
+158,Handbag - Variant 06,Fashion,490.56
+159,Kurta - Variant 06,Fashion,1923.28
+160,Casual Shoes - Variant 06,Fashion,947.95
+161,T-Shirt - Variant 07,Fashion,1609.17
+162,Jeans - Variant 07,Fashion,3792.93
+163,Jacket - Variant 07,Fashion,2776.78
+164,Sneakers - Variant 07,Fashion,3871.05
+165,Shirt - Variant 07,Fashion,2711.3
+166,Dress - Variant 07,Fashion,1956.8
+167,Hoodie - Variant 07,Fashion,1662.73
+168,Handbag - Variant 07,Fashion,3105.79
+169,Kurta - Variant 07,Fashion,4912.55
+170,Casual Shoes - Variant 07,Fashion,3459.96
+171,T-Shirt - Variant 08,Fashion,2949.39
+172,Jeans - Variant 08,Fashion,3844.49
+173,Jacket - Variant 08,Fashion,1649.8
+174,Sneakers - Variant 08,Fashion,1806.08
+175,Shirt - Variant 08,Fashion,4123.33
+176,Dress - Variant 08,Fashion,2426.72
+177,Hoodie - Variant 08,Fashion,3129.96
+178,Handbag - Variant 08,Fashion,4999.51
+179,Kurta - Variant 08,Fashion,1372.2
+180,Casual Shoes - Variant 08,Fashion,870.43
+181,T-Shirt - Variant 09,Fashion,3358.5
+182,Jeans - Variant 09,Fashion,1680.04
+183,Jacket - Variant 09,Fashion,3172.14
+184,Sneakers - Variant 09,Fashion,4367.13
+185,Shirt - Variant 09,Fashion,4751.26
+186,Dress - Variant 09,Fashion,2029.05
+187,Hoodie - Variant 09,Fashion,3748.52
+188,Handbag - Variant 09,Fashion,2430.11
+189,Kurta - Variant 09,Fashion,400.6
+190,Casual Shoes - Variant 09,Fashion,3036.44
+191,T-Shirt - Variant 10,Fashion,3161.06
+192,Jeans - Variant 10,Fashion,1532.93
+193,Jacket - Variant 10,Fashion,4399.93
+194,Sneakers - Variant 10,Fashion,4861.86
+195,Shirt - Variant 10,Fashion,3135.02
+196,Dress - Variant 10,Fashion,1384.56
+197,Hoodie - Variant 10,Fashion,2511.31
+198,Handbag - Variant 10,Fashion,1317.61
+199,Kurta - Variant 10,Fashion,3952.05
+200,Casual Shoes - Variant 10,Fashion,535.72
+201,Mixer Grinder - Variant 01,Home & Kitchen,4918.3
+202,Cookware Set - Variant 01,Home & Kitchen,8060.8
+203,Table Lamp - Variant 01,Home & Kitchen,9438.08
+204,Bedsheet - Variant 01,Home & Kitchen,8340.96
+205,Storage Box - Variant 01,Home & Kitchen,11427.09
+206,Electric Kettle - Variant 01,Home & Kitchen,2997.76
+207,Wall Clock - Variant 01,Home & Kitchen,6815.59
+208,Coffee Maker - Variant 01,Home & Kitchen,10339.1
+209,Dining Set - Variant 01,Home & Kitchen,13284.7
+210,Air Fryer - Variant 01,Home & Kitchen,406.29
+211,Mixer Grinder - Variant 02,Home & Kitchen,2990.9
+212,Cookware Set - Variant 02,Home & Kitchen,9892.24
+213,Table Lamp - Variant 02,Home & Kitchen,9401.8
+214,Bedsheet - Variant 02,Home & Kitchen,5337.3
+215,Storage Box - Variant 02,Home & Kitchen,9822.42
+216,Electric Kettle - Variant 02,Home & Kitchen,6563.81
+217,Wall Clock - Variant 02,Home & Kitchen,13250.73
+218,Coffee Maker - Variant 02,Home & Kitchen,5858.67
+219,Dining Set - Variant 02,Home & Kitchen,10804.1
+220,Air Fryer - Variant 02,Home & Kitchen,9088.82
+221,Mixer Grinder - Variant 03,Home & Kitchen,8049.24
+222,Cookware Set - Variant 03,Home & Kitchen,14851.14
+223,Table Lamp - Variant 03,Home & Kitchen,14938.38
+224,Bedsheet - Variant 03,Home & Kitchen,486.75
+225,Storage Box - Variant 03,Home & Kitchen,2609.33
+226,Electric Kettle - Variant 03,Home & Kitchen,565.89
+227,Wall Clock - Variant 03,Home & Kitchen,13904.34
+228,Coffee Maker - Variant 03,Home & Kitchen,6435.5
+229,Dining Set - Variant 03,Home & Kitchen,3091.17
+230,Air Fryer - Variant 03,Home & Kitchen,3509.04
+231,Mixer Grinder - Variant 04,Home & Kitchen,12565.82
+232,Cookware Set - Variant 04,Home & Kitchen,2154.33
+233,Table Lamp - Variant 04,Home & Kitchen,14346.57
+234,Bedsheet - Variant 04,Home & Kitchen,7260.62
+235,Storage Box - Variant 04,Home & Kitchen,10339.35
+236,Electric Kettle - Variant 04,Home & Kitchen,13332.23
+237,Wall Clock - Variant 04,Home & Kitchen,14591.86
+238,Coffee Maker - Variant 04,Home & Kitchen,14604.31
+239,Dining Set - Variant 04,Home & Kitchen,623.16
+240,Air Fryer - Variant 04,Home & Kitchen,3382.21
+241,Mixer Grinder - Variant 05,Home & Kitchen,4181.97
+242,Cookware Set - Variant 05,Home & Kitchen,13817.25
+243,Table Lamp - Variant 05,Home & Kitchen,3570.12
+244,Bedsheet - Variant 05,Home & Kitchen,5410.8
+245,Storage Box - Variant 05,Home & Kitchen,4123.44
+246,Electric Kettle - Variant 05,Home & Kitchen,7587.41
+247,Wall Clock - Variant 05,Home & Kitchen,11643.12
+248,Coffee Maker - Variant 05,Home & Kitchen,639.5
+249,Dining Set - Variant 05,Home & Kitchen,12334.96
+250,Air Fryer - Variant 05,Home & Kitchen,6244.89
+251,Mixer Grinder - Variant 06,Home & Kitchen,3381.62
+252,Cookware Set - Variant 06,Home & Kitchen,14192.61
+253,Table Lamp - Variant 06,Home & Kitchen,3091.11
+254,Bedsheet - Variant 06,Home & Kitchen,666.22
+255,Storage Box - Variant 06,Home & Kitchen,14449.97
+256,Electric Kettle - Variant 06,Home & Kitchen,12822.99
+257,Wall Clock - Variant 06,Home & Kitchen,7310.3
+258,Coffee Maker - Variant 06,Home & Kitchen,11319.83
+259,Dining Set - Variant 06,Home & Kitchen,1075.86
+260,Air Fryer - Variant 06,Home & Kitchen,10012.2
+261,Mixer Grinder - Variant 07,Home & Kitchen,8373.02
+262,Cookware Set - Variant 07,Home & Kitchen,4558.85
+263,Table Lamp - Variant 07,Home & Kitchen,4360.95
+264,Bedsheet - Variant 07,Home & Kitchen,5869.73
+265,Storage Box - Variant 07,Home & Kitchen,10925.76
+266,Electric Kettle - Variant 07,Home & Kitchen,4941.33
+267,Wall Clock - Variant 07,Home & Kitchen,14813.29
+268,Coffee Maker - Variant 07,Home & Kitchen,2207.79
+269,Dining Set - Variant 07,Home & Kitchen,1685.51
+270,Air Fryer - Variant 07,Home & Kitchen,10485.94
+271,Mixer Grinder - Variant 08,Home & Kitchen,8363.31
+272,Cookware Set - Variant 08,Home & Kitchen,2109.57
+273,Table Lamp - Variant 08,Home & Kitchen,13395.84
+274,Bedsheet - Variant 08,Home & Kitchen,14663.4
+275,Storage Box - Variant 08,Home & Kitchen,3198.47
+276,Electric Kettle - Variant 08,Home & Kitchen,4630.37
+277,Wall Clock - Variant 08,Home & Kitchen,12831.22
+278,Coffee Maker - Variant 08,Home & Kitchen,2458.86
+279,Dining Set - Variant 08,Home & Kitchen,6909.71
+280,Air Fryer - Variant 08,Home & Kitchen,6723.64
+281,Mixer Grinder - Variant 09,Home & Kitchen,5151.0
+282,Cookware Set - Variant 09,Home & Kitchen,6183.63
+283,Table Lamp - Variant 09,Home & Kitchen,14721.39
+284,Bedsheet - Variant 09,Home & Kitchen,1127.31
+285,Storage Box - Variant 09,Home & Kitchen,980.79
+286,Electric Kettle - Variant 09,Home & Kitchen,11986.06
+287,Wall Clock - Variant 09,Home & Kitchen,14633.42
+288,Coffee Maker - Variant 09,Home & Kitchen,13676.64
+289,Dining Set - Variant 09,Home & Kitchen,13875.43
+290,Air Fryer - Variant 09,Home & Kitchen,3788.67
+291,Mixer Grinder - Variant 10,Home & Kitchen,9304.46
+292,Cookware Set - Variant 10,Home & Kitchen,4640.15
+293,Table Lamp - Variant 10,Home & Kitchen,12970.68
+294,Bedsheet - Variant 10,Home & Kitchen,9693.37
+295,Storage Box - Variant 10,Home & Kitchen,14120.57
+296,Electric Kettle - Variant 10,Home & Kitchen,11256.13
+297,Wall Clock - Variant 10,Home & Kitchen,4250.18
+298,Coffee Maker - Variant 10,Home & Kitchen,14022.37
+299,Dining Set - Variant 10,Home & Kitchen,5031.33
+300,Air Fryer - Variant 10,Home & Kitchen,5804.89
+301,Face Wash - Variant 01,Beauty & Personal Care,1131.54
+302,Moisturizer - Variant 01,Beauty & Personal Care,1568.96
+303,Shampoo - Variant 01,Beauty & Personal Care,933.48
+304,Conditioner - Variant 01,Beauty & Personal Care,2923.41
+305,Sunscreen - Variant 01,Beauty & Personal Care,1009.46
+306,Body Lotion - Variant 01,Beauty & Personal Care,2330.01
+307,Hair Serum - Variant 01,Beauty & Personal Care,1876.48
+308,Perfume - Variant 01,Beauty & Personal Care,1024.37
+309,Face Mask - Variant 01,Beauty & Personal Care,721.07
+310,Lip Balm - Variant 01,Beauty & Personal Care,655.86
+311,Face Wash - Variant 02,Beauty & Personal Care,359.07
+312,Moisturizer - Variant 02,Beauty & Personal Care,3713.28
+313,Shampoo - Variant 02,Beauty & Personal Care,794.97
+314,Conditioner - Variant 02,Beauty & Personal Care,1373.48
+315,Sunscreen - Variant 02,Beauty & Personal Care,2023.82
+316,Body Lotion - Variant 02,Beauty & Personal Care,2993.66
+317,Hair Serum - Variant 02,Beauty & Personal Care,1589.49
+318,Perfume - Variant 02,Beauty & Personal Care,3720.21
+319,Face Mask - Variant 02,Beauty & Personal Care,1819.75
+320,Lip Balm - Variant 02,Beauty & Personal Care,2825.74
+321,Face Wash - Variant 03,Beauty & Personal Care,416.76
+322,Moisturizer - Variant 03,Beauty & Personal Care,2110.58
+323,Shampoo - Variant 03,Beauty & Personal Care,842.96
+324,Conditioner - Variant 03,Beauty & Personal Care,3223.05
+325,Sunscreen - Variant 03,Beauty & Personal Care,3412.24
+326,Body Lotion - Variant 03,Beauty & Personal Care,2056.59
+327,Hair Serum - Variant 03,Beauty & Personal Care,3507.93
+328,Perfume - Variant 03,Beauty & Personal Care,2492.49
+329,Face Mask - Variant 03,Beauty & Personal Care,879.2
+330,Lip Balm - Variant 03,Beauty & Personal Care,211.11
+331,Face Wash - Variant 04,Beauty & Personal Care,3568.32
+332,Moisturizer - Variant 04,Beauty & Personal Care,2465.74
+333,Shampoo - Variant 04,Beauty & Personal Care,3020.31
+334,Conditioner - Variant 04,Beauty & Personal Care,2842.85
+335,Sunscreen - Variant 04,Beauty & Personal Care,1640.72
+336,Body Lotion - Variant 04,Beauty & Personal Care,2404.0
+337,Hair Serum - Variant 04,Beauty & Personal Care,3430.33
+338,Perfume - Variant 04,Beauty & Personal Care,3640.78
+339,Face Mask - Variant 04,Beauty & Personal Care,3947.08
+340,Lip Balm - Variant 04,Beauty & Personal Care,3073.74
+341,Face Wash - Variant 05,Beauty & Personal Care,2100.76
+342,Moisturizer - Variant 05,Beauty & Personal Care,2958.91
+343,Shampoo - Variant 05,Beauty & Personal Care,668.54
+344,Conditioner - Variant 05,Beauty & Personal Care,2010.49
+345,Sunscreen - Variant 05,Beauty & Personal Care,677.26
+346,Body Lotion - Variant 05,Beauty & Personal Care,868.74
+347,Hair Serum - Variant 05,Beauty & Personal Care,826.5
+348,Perfume - Variant 05,Beauty & Personal Care,2939.32
+349,Face Mask - Variant 05,Beauty & Personal Care,3943.07
+350,Lip Balm - Variant 05,Beauty & Personal Care,2053.47
+351,Face Wash - Variant 06,Beauty & Personal Care,3564.87
+352,Moisturizer - Variant 06,Beauty & Personal Care,2906.76
+353,Shampoo - Variant 06,Beauty & Personal Care,2347.82
+354,Conditioner - Variant 06,Beauty & Personal Care,3556.36
+355,Sunscreen - Variant 06,Beauty & Personal Care,3593.28
+356,Body Lotion - Variant 06,Beauty & Personal Care,3043.76
+357,Hair Serum - Variant 06,Beauty & Personal Care,2312.72
+358,Perfume - Variant 06,Beauty & Personal Care,2248.98
+359,Face Mask - Variant 06,Beauty & Personal Care,1669.4
+360,Lip Balm - Variant 06,Beauty & Personal Care,916.27
+361,Face Wash - Variant 07,Beauty & Personal Care,3687.77
+362,Moisturizer - Variant 07,Beauty & Personal Care,3625.8
+363,Shampoo - Variant 07,Beauty & Personal Care,1037.71
+364,Conditioner - Variant 07,Beauty & Personal Care,1377.62
+365,Sunscreen - Variant 07,Beauty & Personal Care,1568.03
+366,Body Lotion - Variant 07,Beauty & Personal Care,3734.48
+367,Hair Serum - Variant 07,Beauty & Personal Care,3477.38
+368,Perfume - Variant 07,Beauty & Personal Care,3866.09
+369,Face Mask - Variant 07,Beauty & Personal Care,3929.75
+370,Lip Balm - Variant 07,Beauty & Personal Care,2652.16
+371,Face Wash - Variant 08,Beauty & Personal Care,724.83
+372,Moisturizer - Variant 08,Beauty & Personal Care,386.21
+373,Shampoo - Variant 08,Beauty & Personal Care,2338.25
+374,Conditioner - Variant 08,Beauty & Personal Care,2245.8
+375,Sunscreen - Variant 08,Beauty & Personal Care,1927.95
+376,Body Lotion - Variant 08,Beauty & Personal Care,3703.85
+377,Hair Serum - Variant 08,Beauty & Personal Care,2166.49
+378,Perfume - Variant 08,Beauty & Personal Care,779.77
+379,Face Mask - Variant 08,Beauty & Personal Care,2848.87
+380,Lip Balm - Variant 08,Beauty & Personal Care,887.3
+381,Face Wash - Variant 09,Beauty & Personal Care,3332.71
+382,Moisturizer - Variant 09,Beauty & Personal Care,3030.78
+383,Shampoo - Variant 09,Beauty & Personal Care,1210.99
+384,Conditioner - Variant 09,Beauty & Personal Care,2626.9
+385,Sunscreen - Variant 09,Beauty & Personal Care,1024.79
+386,Body Lotion - Variant 09,Beauty & Personal Care,530.91
+387,Hair Serum - Variant 09,Beauty & Personal Care,2915.57
+388,Perfume - Variant 09,Beauty & Personal Care,2258.39
+389,Face Mask - Variant 09,Beauty & Personal Care,2357.05
+390,Lip Balm - Variant 09,Beauty & Personal Care,1653.45
+391,Face Wash - Variant 10,Beauty & Personal Care,3223.38
+392,Moisturizer - Variant 10,Beauty & Personal Care,2839.96
+393,Shampoo - Variant 10,Beauty & Personal Care,3284.54
+394,Conditioner - Variant 10,Beauty & Personal Care,558.75
+395,Sunscreen - Variant 10,Beauty & Personal Care,2879.72
+396,Body Lotion - Variant 10,Beauty & Personal Care,2968.57
+397,Hair Serum - Variant 10,Beauty & Personal Care,3550.35
+398,Perfume - Variant 10,Beauty & Personal Care,353.06
+399,Face Mask - Variant 10,Beauty & Personal Care,2364.02
+400,Lip Balm - Variant 10,Beauty & Personal Care,2331.84
+401,Yoga Mat - Variant 01,Sports & Fitness,644.95
+402,Dumbbell Set - Variant 01,Sports & Fitness,13616.99
+403,Running Shoes - Variant 01,Sports & Fitness,10971.53
+404,Gym Bag - Variant 01,Sports & Fitness,8780.43
+405,Fitness Band - Variant 01,Sports & Fitness,9362.32
+406,Water Bottle - Variant 01,Sports & Fitness,12117.89
+407,Resistance Bands - Variant 01,Sports & Fitness,11659.21
+408,Skipping Rope - Variant 01,Sports & Fitness,11931.43
+409,Exercise Ball - Variant 01,Sports & Fitness,8550.42
+410,Sports Jacket - Variant 01,Sports & Fitness,11689.74
+411,Yoga Mat - Variant 02,Sports & Fitness,4494.64
+412,Dumbbell Set - Variant 02,Sports & Fitness,19063.75
+413,Running Shoes - Variant 02,Sports & Fitness,15088.62
+414,Gym Bag - Variant 02,Sports & Fitness,17473.64
+415,Fitness Band - Variant 02,Sports & Fitness,9035.02
+416,Water Bottle - Variant 02,Sports & Fitness,7777.28
+417,Resistance Bands - Variant 02,Sports & Fitness,1033.96
+418,Skipping Rope - Variant 02,Sports & Fitness,12586.78
+419,Exercise Ball - Variant 02,Sports & Fitness,10697.01
+420,Sports Jacket - Variant 02,Sports & Fitness,11343.08
+421,Yoga Mat - Variant 03,Sports & Fitness,3493.76
+422,Dumbbell Set - Variant 03,Sports & Fitness,12326.15
+423,Running Shoes - Variant 03,Sports & Fitness,6411.01
+424,Gym Bag - Variant 03,Sports & Fitness,8019.26
+425,Fitness Band - Variant 03,Sports & Fitness,13896.3
+426,Water Bottle - Variant 03,Sports & Fitness,17830.07
+427,Resistance Bands - Variant 03,Sports & Fitness,9376.22
+428,Skipping Rope - Variant 03,Sports & Fitness,5060.41
+429,Exercise Ball - Variant 03,Sports & Fitness,9102.73
+430,Sports Jacket - Variant 03,Sports & Fitness,10875.89
+431,Yoga Mat - Variant 04,Sports & Fitness,14647.9
+432,Dumbbell Set - Variant 04,Sports & Fitness,10598.92
+433,Running Shoes - Variant 04,Sports & Fitness,10976.98
+434,Gym Bag - Variant 04,Sports & Fitness,10938.36
+435,Fitness Band - Variant 04,Sports & Fitness,15724.59
+436,Water Bottle - Variant 04,Sports & Fitness,17639.26
+437,Resistance Bands - Variant 04,Sports & Fitness,19119.47
+438,Skipping Rope - Variant 04,Sports & Fitness,19887.71
+439,Exercise Ball - Variant 04,Sports & Fitness,16867.23
+440,Sports Jacket - Variant 04,Sports & Fitness,12002.71
+441,Yoga Mat - Variant 05,Sports & Fitness,1697.27
+442,Dumbbell Set - Variant 05,Sports & Fitness,8181.81
+443,Running Shoes - Variant 05,Sports & Fitness,3055.05
+444,Gym Bag - Variant 05,Sports & Fitness,8882.37
+445,Fitness Band - Variant 05,Sports & Fitness,14768.04
+446,Water Bottle - Variant 05,Sports & Fitness,4521.42
+447,Resistance Bands - Variant 05,Sports & Fitness,12117.3
+448,Skipping Rope - Variant 05,Sports & Fitness,17354.07
+449,Exercise Ball - Variant 05,Sports & Fitness,10104.32
+450,Sports Jacket - Variant 05,Sports & Fitness,2495.83
+451,Yoga Mat - Variant 06,Sports & Fitness,19995.8
+452,Dumbbell Set - Variant 06,Sports & Fitness,2171.22
+453,Running Shoes - Variant 06,Sports & Fitness,17001.2
+454,Gym Bag - Variant 06,Sports & Fitness,7221.76
+455,Fitness Band - Variant 06,Sports & Fitness,2265.33
+456,Water Bottle - Variant 06,Sports & Fitness,10817.89
+457,Resistance Bands - Variant 06,Sports & Fitness,1436.03
+458,Skipping Rope - Variant 06,Sports & Fitness,10931.28
+459,Exercise Ball - Variant 06,Sports & Fitness,13447.74
+460,Sports Jacket - Variant 06,Sports & Fitness,14318.94
+461,Yoga Mat - Variant 07,Sports & Fitness,18093.74
+462,Dumbbell Set - Variant 07,Sports & Fitness,15421.74
+463,Running Shoes - Variant 07,Sports & Fitness,16768.68
+464,Gym Bag - Variant 07,Sports & Fitness,18468.07
+465,Fitness Band - Variant 07,Sports & Fitness,14159.57
+466,Water Bottle - Variant 07,Sports & Fitness,16972.83
+467,Resistance Bands - Variant 07,Sports & Fitness,7901.86
+468,Skipping Rope - Variant 07,Sports & Fitness,3435.64
+469,Exercise Ball - Variant 07,Sports & Fitness,15663.04
+470,Sports Jacket - Variant 07,Sports & Fitness,3346.33
+471,Yoga Mat - Variant 08,Sports & Fitness,5941.7
+472,Dumbbell Set - Variant 08,Sports & Fitness,4296.61
+473,Running Shoes - Variant 08,Sports & Fitness,7585.63
+474,Gym Bag - Variant 08,Sports & Fitness,10336.62
+475,Fitness Band - Variant 08,Sports & Fitness,10514.68
+476,Water Bottle - Variant 08,Sports & Fitness,4342.1
+477,Resistance Bands - Variant 08,Sports & Fitness,3247.76
+478,Skipping Rope - Variant 08,Sports & Fitness,5205.45
+479,Exercise Ball - Variant 08,Sports & Fitness,7742.46
+480,Sports Jacket - Variant 08,Sports & Fitness,6217.05
+481,Yoga Mat - Variant 09,Sports & Fitness,7352.19
+482,Dumbbell Set - Variant 09,Sports & Fitness,10831.38
+483,Running Shoes - Variant 09,Sports & Fitness,6720.26
+484,Gym Bag - Variant 09,Sports & Fitness,5464.36
+485,Fitness Band - Variant 09,Sports & Fitness,10433.16
+486,Water Bottle - Variant 09,Sports & Fitness,10031.41
+487,Resistance Bands - Variant 09,Sports & Fitness,12005.03
+488,Skipping Rope - Variant 09,Sports & Fitness,5285.98
+489,Exercise Ball - Variant 09,Sports & Fitness,7909.84
+490,Sports Jacket - Variant 09,Sports & Fitness,19153.07
+491,Yoga Mat - Variant 10,Sports & Fitness,3241.46
+492,Dumbbell Set - Variant 10,Sports & Fitness,12402.13
+493,Running Shoes - Variant 10,Sports & Fitness,14656.4
+494,Gym Bag - Variant 10,Sports & Fitness,912.16
+495,Fitness Band - Variant 10,Sports & Fitness,5380.92
+496,Water Bottle - Variant 10,Sports & Fitness,7927.92
+497,Resistance Bands - Variant 10,Sports & Fitness,3150.62
+498,Skipping Rope - Variant 10,Sports & Fitness,4998.65
+499,Exercise Ball - Variant 10,Sports & Fitness,16251.96
+500,Sports Jacket - Variant 10,Sports & Fitness,19002.04
