@@ -1,0 +1,376 @@
+// Total Sessions
+Total Sessions =
+COUNTROWS(Sessions)
+
+// Total Visitors
+Total Visitors =
+DISTINCTCOUNT(Sessions[visitor_id])
+
+// Total Orders
+Total Orders =
+CALCULATE(COUNTROWS(Orders), Orders[order_status] = "Completed")
+
+// Total Revenue
+Total Revenue =
+CALCULATE(SUM(Orders[order_value_inr]), Orders[order_status] = "Completed")
+
+// Purchasing Sessions
+Purchasing Sessions =
+SUM(Sessions[purchase_flag])
+
+// Conversion Rate
+Conversion Rate =
+DIVIDE([Purchasing Sessions], [Total Sessions])
+
+// Average Order Value
+Average Order Value =
+DIVIDE([Total Revenue], [Total Orders])
+
+// Revenue per Session
+Revenue per Session =
+DIVIDE([Total Revenue], [Total Sessions])
+
+// Revenue per Visitor
+Revenue per Visitor =
+DIVIDE([Total Revenue], [Total Visitors])
+
+// Engaged Sessions
+Engaged Sessions =
+SUM(Sessions[engaged_flag])
+
+// Engagement Rate
+Engagement Rate =
+DIVIDE([Engaged Sessions], [Total Sessions])
+
+// Average Session Minutes
+Average Session Minutes =
+DIVIDE(AVERAGE(Sessions[duration_seconds]), 60)
+
+// Pages per Session
+Pages per Session =
+AVERAGE(Sessions[page_views])
+
+// New Visitor Sessions
+New Visitor Sessions =
+CALCULATE([Total Sessions], KEEPFILTERS(Sessions[user_type] = "New"))
+
+// Returning Sessions
+Returning Sessions =
+CALCULATE([Total Sessions], KEEPFILTERS(Sessions[user_type] = "Returning"))
+
+// Returning Session Share
+Returning Session Share =
+DIVIDE([Returning Sessions], [Total Sessions])
+
+// Session Revenue
+Session Revenue =
+SUM(Sessions[revenue_inr])
+
+// Revenue Reconciliation Difference
+Revenue Reconciliation Difference =
+[Total Revenue] - [Session Revenue]
+
+// Revenue Previous Period
+Revenue Previous Period =
+VAR StartD = MIN('Date'[Date])
+VAR EndD = MAX('Date'[Date])
+VAR DaysN = DATEDIFF(StartD, EndD, DAY) + 1
+VAR EarliestD = CALCULATE(MIN('Date'[Date]), REMOVEFILTERS('Date'))
+RETURN IF(StartD - DaysN >= EarliestD, CALCULATE([Total Revenue], REMOVEFILTERS('Date'), DATESBETWEEN('Date'[Date], StartD - DaysN, StartD - 1)))
+
+// Revenue Change %
+Revenue Change % =
+DIVIDE([Total Revenue] - [Revenue Previous Period], [Revenue Previous Period])
+
+// Conversion Previous Period
+Conversion Previous Period =
+VAR StartD = MIN('Date'[Date])
+VAR EndD = MAX('Date'[Date])
+VAR DaysN = DATEDIFF(StartD, EndD, DAY) + 1
+VAR EarliestD = CALCULATE(MIN('Date'[Date]), REMOVEFILTERS('Date'))
+RETURN IF(StartD - DaysN >= EarliestD, CALCULATE([Conversion Rate], REMOVEFILTERS('Date'), DATESBETWEEN('Date'[Date], StartD - DaysN, StartD - 1)))
+
+// Conversion Change pp
+Conversion Change pp =
+IF(NOT ISBLANK([Conversion Previous Period]), 100 * ([Conversion Rate] - [Conversion Previous Period]))
+
+// Date Context
+Date Context =
+"Session dates · " & FORMAT(MIN('Date'[Date]), "dd MMM yyyy") & " – " & FORMAT(MAX('Date'[Date]), "dd MMM yyyy")
+
+// Revenue Trend Title
+Revenue Trend Title =
+"Revenue trend | " & FORMAT(MIN('Date'[Date]), "MMM yyyy") & " – " & FORMAT(MAX('Date'[Date]), "MMM yyyy")
+
+// Product View Sessions
+Product View Sessions =
+SUM(Sessions[viewed_flag])
+
+// Cart Sessions
+Cart Sessions =
+SUM(Sessions[cart_flag])
+
+// Checkout Sessions
+Checkout Sessions =
+SUM(Sessions[checkout_flag])
+
+// Cart Abandonment
+Cart Abandonment =
+DIVIDE([Cart Sessions] - [Purchasing Sessions], [Cart Sessions])
+
+// Checkout Abandonment
+Checkout Abandonment =
+DIVIDE([Checkout Sessions] - [Purchasing Sessions], [Checkout Sessions])
+
+// Funnel Sessions
+Funnel Sessions =
+SWITCH(SELECTEDVALUE('Funnel Stage'[Stage Order]), 1,[Total Sessions], 2,[Product View Sessions], 3,[Cart Sessions], 4,[Checkout Sessions], 5,[Purchasing Sessions])
+
+// Previous Stage Sessions
+Previous Stage Sessions =
+SWITCH(SELECTEDVALUE('Funnel Stage'[Stage Order]), 1,[Total Sessions], 2,[Total Sessions], 3,[Product View Sessions], 4,[Cart Sessions], 5,[Checkout Sessions])
+
+// Stage Conversion
+Stage Conversion =
+DIVIDE([Funnel Sessions], [Previous Stage Sessions])
+
+// Stage Drop-off
+Stage Drop-off =
+[Previous Stage Sessions] - [Funnel Sessions]
+
+// Stage Drop-off %
+Stage Drop-off % =
+DIVIDE([Stage Drop-off], [Previous Stage Sessions])
+
+// Campaign Spend
+Campaign Spend =
+VAR ActiveCampaigns = FILTER(VALUES(Sessions[campaign_id]), Sessions[campaign_id] <> 0)
+RETURN CALCULATE(SUM(Campaigns[campaign_spend]), KEEPFILTERS(TREATAS(ActiveCampaigns, Campaigns[campaign_id])))
+
+// Diagnostic ROAS
+Diagnostic ROAS =
+DIVIDE([Campaign Attributed Revenue], [Campaign Spend])
+
+// Conversion Opportunity Score
+Conversion Opportunity Score =
+VAR PeerIDs = SELECTCOLUMNS(FILTER(ALLSELECTED(Campaigns), Campaigns[campaign_id] <> 0), "__ID", Campaigns[campaign_id])
+VAR Stats = ADDCOLUMNS(PeerIDs,
+ "__Sessions", VAR IDN = [__ID] RETURN CALCULATE([Total Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Purchases", VAR IDN = [__ID] RETURN CALCULATE([Purchasing Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Checkout", VAR IDN = [__ID] RETURN CALCULATE([Checkout Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])))
+VAR PeerCVR = DIVIDE(SUMX(Stats, [__Purchases]), SUMX(Stats, [__Sessions]))
+VAR PeakTraffic = MAXX(Stats, [__Sessions])
+VAR Scores = ADDCOLUMNS(FILTER(Stats, [__Sessions] >= 100), "__Score",
+ VAR CVR = DIVIDE([__Purchases], [__Sessions])
+ VAR Gap = MIN(1, MAX(0, DIVIDE(PeerCVR - CVR, PeerCVR, 0)))
+ VAR Loss = DIVIDE([__Checkout] - [__Purchases], [__Checkout], 0)
+ RETURN ROUND(100 * (0.45 * Gap + 0.30 * Loss + 0.25 * DIVIDE([__Sessions], PeakTraffic, 0)), 6))
+VAR CurrentID = SELECTEDVALUE(Campaigns[campaign_id])
+VAR CurrentScore = MAXX(FILTER(Scores, [__ID] = CurrentID), [__Score])
+RETURN IF(HASONEVALUE(Campaigns[campaign_id]), CurrentScore)
+
+// Campaign Rank
+Campaign Rank =
+VAR PeerIDs = SELECTCOLUMNS(FILTER(ALLSELECTED(Campaigns), Campaigns[campaign_id] <> 0), "__ID", Campaigns[campaign_id])
+VAR Stats = ADDCOLUMNS(PeerIDs,
+ "__Sessions", VAR IDN = [__ID] RETURN CALCULATE([Total Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Purchases", VAR IDN = [__ID] RETURN CALCULATE([Purchasing Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Checkout", VAR IDN = [__ID] RETURN CALCULATE([Checkout Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])))
+VAR PeerCVR = DIVIDE(SUMX(Stats, [__Purchases]), SUMX(Stats, [__Sessions]))
+VAR PeakTraffic = MAXX(Stats, [__Sessions])
+VAR Scores = ADDCOLUMNS(FILTER(Stats, [__Sessions] >= 100), "__Score",
+ VAR CVR = DIVIDE([__Purchases], [__Sessions])
+ VAR Gap = MIN(1, MAX(0, DIVIDE(PeerCVR - CVR, PeerCVR, 0)))
+ VAR Loss = DIVIDE([__Checkout] - [__Purchases], [__Checkout], 0)
+ RETURN ROUND(100 * (0.45 * Gap + 0.30 * Loss + 0.25 * DIVIDE([__Sessions], PeakTraffic, 0)), 6))
+VAR CurrentID = SELECTEDVALUE(Campaigns[campaign_id])
+VAR CurrentScore = MAXX(FILTER(Scores, [__ID] = CurrentID), [__Score])
+RETURN IF(HASONEVALUE(Campaigns[campaign_id]) && NOT ISBLANK(CurrentScore), RANKX(Scores, [__Score], CurrentScore, DESC, DENSE))
+
+// Top 10 Campaign Score
+Top 10 Campaign Score =
+VAR PeerIDs = SELECTCOLUMNS(FILTER(ALLSELECTED(Campaigns), Campaigns[campaign_id] <> 0), "__ID", Campaigns[campaign_id])
+VAR Stats = ADDCOLUMNS(PeerIDs,
+ "__Sessions", VAR IDN = [__ID] RETURN CALCULATE([Total Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Purchases", VAR IDN = [__ID] RETURN CALCULATE([Purchasing Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Checkout", VAR IDN = [__ID] RETURN CALCULATE([Checkout Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])))
+VAR PeerCVR = DIVIDE(SUMX(Stats, [__Purchases]), SUMX(Stats, [__Sessions]))
+VAR PeakTraffic = MAXX(Stats, [__Sessions])
+VAR Scores = ADDCOLUMNS(FILTER(Stats, [__Sessions] >= 100), "__Score",
+ VAR CVR = DIVIDE([__Purchases], [__Sessions])
+ VAR Gap = MIN(1, MAX(0, DIVIDE(PeerCVR - CVR, PeerCVR, 0)))
+ VAR Loss = DIVIDE([__Checkout] - [__Purchases], [__Checkout], 0)
+ RETURN ROUND(100 * (0.45 * Gap + 0.30 * Loss + 0.25 * DIVIDE([__Sessions], PeakTraffic, 0)), 6))
+VAR CurrentID = SELECTEDVALUE(Campaigns[campaign_id])
+VAR CurrentScore = MAXX(FILTER(Scores, [__ID] = CurrentID), [__Score])
+VAR Leaders = TOPN(10, Scores, [__Score], DESC, [__ID], ASC)
+RETURN IF(HASONEVALUE(Campaigns[campaign_id]) && COUNTROWS(FILTER(Leaders, [__ID] = CurrentID)) > 0, CurrentScore)
+
+// D1 Eligible Visitors
+D1 Eligible Visitors =
+SUM(Visitors[eligible_d1])
+
+// D1 Retained Visitors
+D1 Retained Visitors =
+CALCULATE(SUM(Visitors[retained_d1]), KEEPFILTERS(Visitors[eligible_d1] = 1))
+
+// D1 Retention
+D1 Retention =
+DIVIDE([D1 Retained Visitors], [D1 Eligible Visitors])
+
+// D7 Eligible Visitors
+D7 Eligible Visitors =
+SUM(Visitors[eligible_d7])
+
+// D7 Retained Visitors
+D7 Retained Visitors =
+CALCULATE(SUM(Visitors[retained_d7]), KEEPFILTERS(Visitors[eligible_d7] = 1))
+
+// D7 Retention
+D7 Retention =
+DIVIDE([D7 Retained Visitors], [D7 Eligible Visitors])
+
+// D30 Eligible Visitors
+D30 Eligible Visitors =
+SUM(Visitors[eligible_d30])
+
+// D30 Retained Visitors
+D30 Retained Visitors =
+CALCULATE(SUM(Visitors[retained_d30]), KEEPFILTERS(Visitors[eligible_d30] = 1))
+
+// D30 Retention
+D30 Retention =
+DIVIDE([D30 Retained Visitors], [D30 Eligible Visitors])
+
+// Cohort Visitors
+Cohort Visitors =
+COUNTROWS(Visitors)
+
+// Cohort Revenue
+Cohort Revenue =
+SUM(Visitors[lifetime_revenue_inr])
+
+// Cohort Conversion
+Cohort Conversion =
+DIVIDE(CALCULATE(COUNTROWS(Visitors), KEEPFILTERS(Visitors[lifetime_orders] > 0)), [Cohort Visitors])
+
+// Repeat Visitor Share
+Repeat Visitor Share =
+DIVIDE(SUM(Visitors[repeat_visitor_flag]), [Cohort Visitors])
+
+// Repeat Buyer Share
+Repeat Buyer Share =
+DIVIDE(SUM(Visitors[repeat_buyer_flag]), CALCULATE(COUNTROWS(Visitors), KEEPFILTERS(Visitors[lifetime_orders] > 0)))
+
+// Monthly Retention
+Monthly Retention =
+VAR OffsetN = SELECTEDVALUE('Month Offset'[Month Offset])
+VAR LastObserved = CALCULATE(MAX('Date'[Date]), REMOVEFILTERS('Date'))
+VAR Eligible = FILTER(VALUES(Visitors[visitor_id]), EOMONTH(CALCULATE(MIN(Visitors[first_visit_date])), OffsetN) <= LastObserved)
+VAR Denominator = COUNTROWS(Eligible)
+VAR ActiveVisitors = CALCULATE(DISTINCTCOUNT('Cohort Activity'[visitor_id]), TREATAS(Eligible, 'Cohort Activity'[visitor_id]), 'Cohort Activity'[month_offset] = OffsetN)
+RETURN IF(ISBLANK(OffsetN), BLANK(), DIVIDE(COALESCE(ActiveVisitors, 0), Denominator))
+
+// Action Center
+Action Center =
+IF(ISBLANK([Checkout Abandonment]), "No checkout sessions in this selection.", "Checkout drop-off: " & FORMAT([Checkout Abandonment],"0.0%") & ". Investigate usability, payments, delivery costs and trust. Causes are unverified.")
+
+// Campaign Action
+Campaign Action =
+VAR PeerIDs = SELECTCOLUMNS(FILTER(ALLSELECTED(Campaigns), Campaigns[campaign_id] <> 0), "__ID", Campaigns[campaign_id])
+VAR Stats = ADDCOLUMNS(PeerIDs,
+ "__Sessions", VAR IDN = [__ID] RETURN CALCULATE([Total Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Purchases", VAR IDN = [__ID] RETURN CALCULATE([Purchasing Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])),
+ "__Checkout", VAR IDN = [__ID] RETURN CALCULATE([Checkout Sessions], REMOVEFILTERS(Campaigns), TREATAS({IDN}, Campaigns[campaign_id])))
+VAR PeerCVR = DIVIDE(SUMX(Stats, [__Purchases]), SUMX(Stats, [__Sessions]))
+VAR PeakTraffic = MAXX(Stats, [__Sessions])
+VAR Scores = ADDCOLUMNS(FILTER(Stats, [__Sessions] >= 100), "__Score",
+ VAR CVR = DIVIDE([__Purchases], [__Sessions])
+ VAR Gap = MIN(1, MAX(0, DIVIDE(PeerCVR - CVR, PeerCVR, 0)))
+ VAR Loss = DIVIDE([__Checkout] - [__Purchases], [__Checkout], 0)
+ RETURN ROUND(100 * (0.45 * Gap + 0.30 * Loss + 0.25 * DIVIDE([__Sessions], PeakTraffic, 0)), 6))
+VAR CurrentID = SELECTEDVALUE(Campaigns[campaign_id])
+VAR CurrentScore = MAXX(FILTER(Scores, [__ID] = CurrentID), [__Score])
+VAR Leaders = TOPN(1, Scores, [__Score], DESC, [__ID], ASC)
+VAR LeaderID = MAXX(Leaders, [__ID])
+VAR LeaderName = CALCULATE(SELECTEDVALUE(Campaigns[campaign_name]), REMOVEFILTERS(Campaigns), TREATAS({LeaderID}, Campaigns[campaign_id]))
+RETURN IF(COUNTROWS(Leaders) = 0, "No campaign meets the 100-session threshold.", "Investigate " & LeaderName & " (score " & FORMAT(MAXX(Leaders, [__Score]), "0.0") & "). Score indicates opportunity, not proven uplift; ROAS uses lifetime budgets.")
+
+// Behavior Action
+Behavior Action =
+"Session conversion: " & FORMAT([Conversion Rate], "0.00%") & "; returning-session share: " & FORMAT([Returning Session Share], "0.0%") & ". Engagement (original rule): " & FORMAT([Engagement Rate], "0.0000%") & "; near-universal qualification limits interpretation."
+
+// Retention Action
+Retention Action =
+"Exact-day retention excludes immature visitors; monthly retention counts any return in a month. Cohort revenue covers observed history, not future value."
+
+// Campaign Detail Title
+Campaign Detail Title =
+"Campaign detail · " & SELECTEDVALUE(Campaigns[campaign_name], "select or drill through to one campaign")
+
+// Sessions Comparison
+Sessions Comparison =
+VAR StartD = MIN('Date'[Date])
+VAR EndD = MAX('Date'[Date])
+VAR DaysN = DATEDIFF(StartD, EndD, DAY) + 1
+VAR EarliestD = CALCULATE(MIN('Date'[Date]), REMOVEFILTERS('Date'))
+VAR Prior = IF(StartD - DaysN >= EarliestD, CALCULATE([Total Sessions], REMOVEFILTERS('Date'), DATESBETWEEN('Date'[Date], StartD - DaysN, StartD - 1)))
+RETURN IF(ISBLANK(Prior) || Prior = 0, UNICHAR(8203), FORMAT(DIVIDE([Total Sessions] - Prior, Prior), "+0.0%;-0.0%;0.0%") & " vs prior equal-length period")
+
+// Orders Comparison
+Orders Comparison =
+VAR StartD = MIN('Date'[Date])
+VAR EndD = MAX('Date'[Date])
+VAR DaysN = DATEDIFF(StartD, EndD, DAY) + 1
+VAR EarliestD = CALCULATE(MIN('Date'[Date]), REMOVEFILTERS('Date'))
+VAR Prior = IF(StartD - DaysN >= EarliestD, CALCULATE([Total Orders], REMOVEFILTERS('Date'), DATESBETWEEN('Date'[Date], StartD - DaysN, StartD - 1)))
+RETURN IF(ISBLANK(Prior) || Prior = 0, UNICHAR(8203), FORMAT(DIVIDE([Total Orders] - Prior, Prior), "+0.0%;-0.0%;0.0%") & " vs prior equal-length period")
+
+// Revenue Comparison
+Revenue Comparison =
+VAR StartD = MIN('Date'[Date])
+VAR EndD = MAX('Date'[Date])
+VAR DaysN = DATEDIFF(StartD, EndD, DAY) + 1
+VAR EarliestD = CALCULATE(MIN('Date'[Date]), REMOVEFILTERS('Date'))
+VAR Prior = IF(StartD - DaysN >= EarliestD, CALCULATE([Total Revenue], REMOVEFILTERS('Date'), DATESBETWEEN('Date'[Date], StartD - DaysN, StartD - 1)))
+RETURN IF(ISBLANK(Prior) || Prior = 0, UNICHAR(8203), FORMAT(DIVIDE([Total Revenue] - Prior, Prior), "+0.0%;-0.0%;0.0%") & " vs prior equal-length period")
+
+// AOV Comparison
+AOV Comparison =
+VAR StartD = MIN('Date'[Date])
+VAR EndD = MAX('Date'[Date])
+VAR DaysN = DATEDIFF(StartD, EndD, DAY) + 1
+VAR EarliestD = CALCULATE(MIN('Date'[Date]), REMOVEFILTERS('Date'))
+VAR Prior = IF(StartD - DaysN >= EarliestD, CALCULATE([Average Order Value], REMOVEFILTERS('Date'), DATESBETWEEN('Date'[Date], StartD - DaysN, StartD - 1)))
+RETURN IF(ISBLANK(Prior) || Prior = 0, UNICHAR(8203), FORMAT(DIVIDE([Average Order Value] - Prior, Prior), "+0.0%;-0.0%;0.0%") & " vs prior equal-length period")
+
+// Conversion Comparison
+Conversion Comparison =
+IF(ISBLANK([Conversion Previous Period]), UNICHAR(8203), FORMAT([Conversion Change pp], "+0.00;-0.00;0.00") & " pp vs prior equal-length period")
+
+// Product Attributed Revenue
+Product Attributed Revenue =
+[Total Revenue]
+
+// Top 5 Product Revenue
+Top 5 Product Revenue =
+VAR RankP = RANKX(ALLSELECTED(Products[product_name]), [Product Attributed Revenue], , DESC, DENSE) RETURN IF(RankP<=5,[Product Attributed Revenue])
+
+// Campaign Attributed Revenue
+Campaign Attributed Revenue =
+CALCULATE([Total Revenue], KEEPFILTERS(Campaigns[campaign_id] <> 0))
+
+// Monthly Retention Background
+Monthly Retention Background =
+VAR RateN = [Monthly Retention]
+RETURN SWITCH(TRUE(), ISBLANK(RateN), "#FFFFFF", SELECTEDVALUE('Month Offset'[Month Offset]) = 0, "#E8E3F3", RateN >= 0.40, "#57458F", RateN >= 0.30, "#7058B8", RateN >= 0.20, "#B7A4E5", RateN >= 0.10, "#DED5F2", "#F2F0FA")
+
+// Monthly Retention Font
+Monthly Retention Font =
+VAR RateN = [Monthly Retention]
+RETURN IF(SELECTEDVALUE('Month Offset'[Month Offset]) <> 0 && NOT ISBLANK(RateN) && RateN >= 0.30, "#FFFFFF", "#28253F")
+
+// Stage Loss Background
+Stage Loss Background =
+VAR LossN = [Stage Drop-off %]
+RETURN SWITCH(TRUE(), ISBLANK(LossN), "#FFFFFF", LossN >= 0.60, "#F7CFB4", LossN >= 0.40, "#FBE6CD", "#FFFFFF")
