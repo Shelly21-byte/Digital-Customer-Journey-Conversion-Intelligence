@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "DigitalAurora"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f81d877e-590f-4176-9534-9cb608399d6a"
+  }
+}

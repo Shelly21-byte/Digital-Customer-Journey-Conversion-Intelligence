@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "DigitalAurora"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5a4fdfe0-6023-4109-bd4a-c925a67da36b"
+  }
+}

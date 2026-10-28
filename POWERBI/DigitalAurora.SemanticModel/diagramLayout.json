@@ -1,0 +1,165 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1335.7433180232115,
+            "y": 414.444380103086
+          },
+          "nodeIndex": "KPI Measures",
+          "nodeLineageTag": "6982b34d-d22b-427c-b317-63d5a0b56592",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 665.1004898790236,
+            "y": 830.78322724110114
+          },
+          "nodeIndex": "Campaigns",
+          "nodeLineageTag": "10c6d1ff-fc34-4d49-9bbf-5046b11c9d7f",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 650.10638955203967
+          },
+          "nodeIndex": "Cohort Activity",
+          "nodeLineageTag": "5ee7086b-16f8-4e7e-b377-3bf55833cafc",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 71.269243668719469,
+            "y": -50
+          },
+          "nodeIndex": "Cohort Date",
+          "nodeLineageTag": "d5de399c-8cf5-4f63-be11-3163c5bb037d",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 271.01753206760031,
+            "y": 830.888760206172
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "539ac0c4-5063-4914-8bdc-f8188c2deaf5",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1619.7433180232115,
+            "y": 500.444380103086
+          },
+          "nodeIndex": "Funnel Stage",
+          "nodeLineageTag": "b40af85b-8d4e-4cef-a1ec-7ceb3f402a77",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1903.7433180232115,
+            "y": 512.444380103086
+          },
+          "nodeIndex": "Month Offset",
+          "nodeLineageTag": "b4e89518-4e54-478d-8460-b8170bfea62c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 816.39733174645733,
+            "y": 529.62812902634028
+          },
+          "nodeIndex": "Orders",
+          "nodeLineageTag": "f24019b5-2bd6-4705-bba4-581765dd410c",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1101.743318023211,
+            "y": 652.88067707695518
+          },
+          "nodeIndex": "Products",
+          "nodeLineageTag": "2d8d006d-a321-4e22-9902-7a110df18324",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 490.02978600533993,
+            "y": 477.45214239241244
+          },
+          "nodeIndex": "Sessions",
+          "nodeLineageTag": "06ad3949-37dd-4cab-9f29-9edc63887eed",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 202.93323439723758,
+            "y": 251.45859905459474
+          },
+          "nodeIndex": "Visitors",
+          "nodeLineageTag": "0ddd84d0-c5d1-415f-957b-873c10d44518",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 40.05255472488323,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
